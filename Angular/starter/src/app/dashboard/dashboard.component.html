@@ -1,0 +1,27 @@
+<div fxLayout="row wrap">
+
+  <div *ngFor="let centro of arrayCentros.rows">
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{centro.nombre}}</mat-card-title>
+        <mat-card-subtitle>{{centro.direccion}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{centro.imagen}}">
+      <mat-card-content>
+        <p>
+          {{centro.descripcion}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="openDialogEditarCentro(centro)">EDITAR</button>
+        <button mat-button (click)="openDialogDeleteCentro(centro)">ELIMINAR</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+  <button (click)="openDialogAddCentro()" mat-fab color="warn" class="mat-fab-bottom-right" style="z-index: 9;">
+    <mat-icon class="mat-24">add</mat-icon>
+  </button>
+
+</div>

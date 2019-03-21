@@ -1,0 +1,44 @@
+<div fxLayout="column" fFlexFill>
+  <h2>Añadir nuevo centro</h2>
+
+  <form [formGroup]="createCentro" fxLayout="column">
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nombre centro" formControlName="nombre" name="nombre" />
+      </mat-form-field>
+
+      <div
+          *ngIf="createCentro.controls['nombre'].invalid && (createCentro.controls['nombre'].dirty || createCentro.controls['nombre'].touched)">
+          <div class="alert alert-danger" *ngIf="createCentro.controls['nombre'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+      <mat-form-field class="example-full-width">
+          <textarea matInput  placeholder="Descripción" formControlName="descripcion" name="descripcion"> </textarea>
+      </mat-form-field>
+
+      <div
+          *ngIf="createCentro.controls['descripcion'].invalid && (createCentro.controls['descripcion'].dirty || createCentro.controls['descripcion'].touched)">
+          <div class="alert alert-danger" *ngIf="createCentro.controls['descripcion'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Dirección" formControlName="direccion" name="direccion" />
+      </mat-form-field>
+
+      <div
+          *ngIf="createCentro.controls['direccion'].invalid && (createCentro.controls['direccion'].dirty || createCentro.controls['direccion'].touched)">
+          <div class="alert alert-danger" *ngIf="createCentro.controls['direccion'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+  </form>
+
+  <button mat-raised-button color="primary" (click)="addCentro()">
+      Crear centro
+  </button>
+</div>

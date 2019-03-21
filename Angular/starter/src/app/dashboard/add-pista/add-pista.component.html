@@ -1,0 +1,52 @@
+<div fxLayout="column" fFlexFill>
+  <h2>Añadir nueva pista</h2>
+
+  <form [formGroup]="createPista" fxLayout="column">
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nombre pista" formControlName="nombre" name="nombre" />
+      </mat-form-field>
+
+      <div
+          *ngIf="createPista.controls['nombre'].invalid && (createPista.controls['nombre'].dirty || createPista.controls['nombre'].touched)">
+          <div class="alert alert-danger" *ngIf="createPista.controls['nombre'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+      <mat-form-field class="example-full-width">
+          <textarea matInput  placeholder="Cubierta" formControlName="cubierta" name="cubierta"> </textarea>
+      </mat-form-field>
+
+      <div
+          *ngIf="createPista.controls['cubierta'].invalid && (createPista.controls['cubierta'].dirty || createPista.controls['cubierta'].touched)">
+          <div class="alert alert-danger" *ngIf="createPista.controls['cubierta'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Precio" formControlName="precio" name="precio" />
+      </mat-form-field>
+
+      <div
+          *ngIf="createPista.controls['precio'].invalid && (createPista.controls['precio'].dirty || createPista.controls['precio'].touched)">
+          <div class="alert alert-danger" *ngIf="createPista.controls['precio'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+      <mat-form-field>
+        <mat-select placeholder="Centro" [formControl]="idCentro">
+            <mat-option *ngFor="let centro of arrayCentros.rows" [value]="centro.id">
+              {{centro.nombre}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+  </form>
+
+  <button mat-raised-button color="primary" (click)="addPista()">
+      Crear pista
+  </button>
+</div>

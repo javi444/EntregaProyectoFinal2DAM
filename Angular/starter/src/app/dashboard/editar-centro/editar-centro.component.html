@@ -1,0 +1,44 @@
+<div fxLayout="column" fFlexFill>
+  <h2>Editar centro</h2>
+
+  <form [formGroup]="editarCentro" fxLayout="column">
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nombre centro" formControlName="nombre" name="nombre" />
+      </mat-form-field>
+
+      <div
+          *ngIf="editarCentro.controls['nombre'].invalid && (editarCentro.controls['nombre'].dirty || editarCentro.controls['nombre'].touched)">
+          <div class="alert alert-danger" *ngIf="editarCentro.controls['nombre'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Dirección" formControlName="direccion" name="direccion" />
+      </mat-form-field>
+
+      <div
+          *ngIf="editarCentro.controls['direccion'].invalid && (editarCentro.controls['direccion'].dirty || editarCentro.controls['direccion'].touched)">
+          <div class="alert alert-danger" *ngIf="editarCentro.controls['direccion'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput  placeholder="Descripción" formControlName="descripcion" name="descripcion"> </textarea>
+      </mat-form-field>
+
+      <div
+          *ngIf="editarCentro.controls['descripcion'].invalid && (editarCentro.controls['descripcion'].dirty || editarCentro.controls['descripcion'].touched)">
+          <div class="alert alert-danger" *ngIf="editarCentro.controls['descripcion'].errors.required">
+              <small><i class="fas fa-exclamation-circle icon-error"></i>Campo obligatorio</small>
+          </div>
+      </div>
+
+  </form>
+
+  <button mat-raised-button color="primary" (click)="editOnecentro()">
+      Editar centro
+  </button>
+</div>

@@ -1,0 +1,589 @@
+{
+	"info": {
+		"_postman_id": "5b19617e-c82a-49df-b5da-8fe5f168a139",
+		"name": "SevillaGol",
+		"description": "Descripción de la colección del proyecto final del CFGS de Desarrollo de Aplicaciones Multiplataforma.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/auth?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "javier@javier.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/auth?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe"
+								}
+							]
+						},
+						"description": "LogIn"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RegistroUsuario",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/users?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "manolo@manolo.com",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "name",
+								"value": "manolo",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "javier@javier.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Javier",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/users?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe"
+								}
+							]
+						},
+						"description": "Registro de usuario."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CrearCentro",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/centros?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjQ2Mjk5Nn0.NPoHaSyHQUbvpll1pcqmUMhgq8L87EVNS0uM6MIFmGs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Centro Deportivo Bami",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Centro de actividad física en Sevilla",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "Calle Castillo de Baños de la Encina, 41013",
+									"type": "text"
+								},
+								{
+									"key": "localizacion",
+									"value": "hola",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/centros?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTNjOTk4YzY2YzgyMDAxNzgzZGNjNCIsImlhdCI6MTU1MzE4OTMxMn0.az7Fkq4I_Tw3sYrxBUeP1ZnBETBTo4eyDNLsyQPrNZY",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"centros"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTNjOTk4YzY2YzgyMDAxNzgzZGNjNCIsImlhdCI6MTU1MzE4OTMxMn0.az7Fkq4I_Tw3sYrxBUeP1ZnBETBTo4eyDNLsyQPrNZY"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ListarCentros",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/centros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/centros?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"centros"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EliminarUnCentro",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/centros/5c880168ee85e800172b4fd0",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/centros/5c8b9be46c9468001711b2af?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjY1MzQ3Nn0.XOX2KLl1P78rQL6EQ418XY40lDCHNZHv0uPkqFpUmbU",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"centros",
+								"5c8b9be46c9468001711b2af"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjY1MzQ3Nn0.XOX2KLl1P78rQL6EQ418XY40lDCHNZHv0uPkqFpUmbU"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SubirFoto",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/fotos?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjU1NTAyOH0.bc3_pQl6h5KDYrvSpbN3mvwU074qoImpwUqEQR4wvD4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "centro_id",
+									"value": "5c93ca80c66c82001783dcc5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/fotos?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTNjOTk4YzY2YzgyMDAxNzgzZGNjNCIsImlhdCI6MTU1MzE4OTMxMn0.az7Fkq4I_Tw3sYrxBUeP1ZnBETBTo4eyDNLsyQPrNZY",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"fotos"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTNjOTk4YzY2YzgyMDAxNzgzZGNjNCIsImlhdCI6MTU1MzE4OTMxMn0.az7Fkq4I_Tw3sYrxBUeP1ZnBETBTo4eyDNLsyQPrNZY"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ListarFotoCentro",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/fotos/5c8a1e2b2fa49415b05d516b?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/fotos/5c8a1e2b2fa49415b05d516b?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"fotos",
+								"5c8a1e2b2fa49415b05d516b"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CrearPista",
+			"item": [
+				{
+					"name": "http://localhost:9000/pistas?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjU2NjAzMH0.FeDm0Bo39uyveVcfJM9c33k8cIgSPJ2R66S74apxKtI",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Pista 2",
+									"type": "text"
+								},
+								{
+									"key": "cubierta",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/pistas/5c90b306181ab300170721cd?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1Mjk4NzAyMH0.cN-2jShU6dIb-kUV7xGK2W36f85miSU8lEAb7UlmCfc",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pistas",
+								"5c90b306181ab300170721cd"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1Mjk4NzAyMH0.cN-2jShU6dIb-kUV7xGK2W36f85miSU8lEAb7UlmCfc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ListarPistas",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/pistas?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/pistas?access_token=qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pistas"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "qZQDzsmwYO5GnOclZbRzdCLPyfW16uAe"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EliminarPista",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/pistas/5c8a47221ff0542a6c0fe16f?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjYzNjIzMX0.ZsuBac9rjs-hcrYltdmieujoBhWXdStj5e-3b8QauH0",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/pistas/5c8b8cbd4ff7c7001730856c?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjYzNjIzMX0.ZsuBac9rjs-hcrYltdmieujoBhWXdStj5e-3b8QauH0",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pistas",
+								"5c8b8cbd4ff7c7001730856c"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODZhYjMxN2U1NWRjMDAxN2E0ODExYSIsImlhdCI6MTU1MjYzNjIzMX0.ZsuBac9rjs-hcrYltdmieujoBhWXdStj5e-3b8QauH0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CrearReserva",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/reservas?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1Mjk5NzU3OH0.J-1oZlMp3qFdxi_Zt4iCs2rB4Bw-29nGzsjn70qcwzc",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "fecha",
+									"value": "2019-03-19T10:50:52.289Z",
+									"type": "text"
+								},
+								{
+									"key": "idUsuario",
+									"value": "5c90b2ad181ab300170721cc",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "idPista",
+									"value": "5c90c800bb2558001715a247",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/reservas?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1Mjk5NzU3OH0.J-1oZlMp3qFdxi_Zt4iCs2rB4Bw-29nGzsjn70qcwzc",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reservas"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1Mjk5NzU3OH0.J-1oZlMp3qFdxi_Zt4iCs2rB4Bw-29nGzsjn70qcwzc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MisReservas",
+			"item": [
+				{
+					"name": "https://sevillagol.herokuapp.com/users/misReservas/5c90b2ad181ab300170721cc?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1MzA4MTE5Nn0.VTLToQ0piq1_SL-uK6PzV_iwvwvI9PY8yML2S1Dac0U",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://sevillagol.herokuapp.com/users/misReservas/5c90b2ad181ab300170721cc?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1MzA4MTE5Nn0.VTLToQ0piq1_SL-uK6PzV_iwvwvI9PY8yML2S1Dac0U",
+							"protocol": "https",
+							"host": [
+								"sevillagol",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"misReservas",
+								"5c90b2ad181ab300170721cc"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOTBiMmFkMTgxYWIzMDAxNzA3MjFjYyIsImlhdCI6MTU1MzA4MTE5Nn0.VTLToQ0piq1_SL-uK6PzV_iwvwvI9PY8yML2S1Dac0U"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
